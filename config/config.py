@@ -12,6 +12,9 @@
 # train data
 TRAIN_DATA_PATH_NEG = '../data/rt-polaritydata/rt-polarity.neg'
 TRAIN_DATA_PATH_POS = '../data/rt-polaritydata/rt-polarity.pos'
+# test data
+TEST_DATA_PATH_NEG = '../data/test_data/rt-polarity.neg'
+TEST_DATA_PATH_POS = '../data/test_data/rt-polarity.pos'
 
 # model Hyperparameters
 # percentage of the training data to use for validation

@@ -8,9 +8,10 @@
 @Software: PyCharm
 @Github  : zhangyuo
 """
-from process.data_process import load_data_and_labels
+from process.data_process import *
 from config.config import *
 from tensorflow.contrib import learn
+import tensorflow as tf
 import numpy as np
 from tool.logger import logger
 from tool.text_classify import TextCNN
@@ -21,8 +22,8 @@ def train():
     model train process
     :return:
     """
-    logger.info('Loading data...')
-    # Load data
+    logger.info('Loading train data...')
+    # Load train data
     x_text, y = load_data_and_labels(TRAIN_DATA_PATH_POS, TRAIN_DATA_PATH_NEG)
     # Build vocabulary
     max_document_length = max([len(x.split(" ")) for x in x_text])
@@ -57,12 +58,65 @@ def train():
                     batch_size=batch_size,
                     num_epochs=num_epochs,
                     evaluate_every=evaluate_every,
-                    checkpoint_every=checkpoint_every
-                    )
+                    checkpoint_every=checkpoint_every)
 
     model.build_graph()
     model.train(vocab_processor, x_train, y_train, x_dev, y_dev)
 
 
+def test():
+    """
+    model test process
+    :return:
+    """
+    logger.info('Loading test data...')
+    # Load test data
+    x_text, y = load_data_and_labels(TEST_DATA_PATH_NEG, TEST_DATA_PATH_POS)
+    # Load vocabulary
+    vocab_processor = learn.preprocessing.VocabularyProcessor.restore('../process/runs/1548399694/vocab')
+    x_test = np.array(list(vocab_processor.transform(x_text)))
+    y_test = y.tolist()
+    logger.info('test data: {}'.format(len(x_test)))
+    # Load train model
+    # ckpt_file = tf.train.latest_checkpoint('..\\process\\runs\\1548399694\\checkpoints\\')
+    # logger.info('model path is %s' % ckpt_file)
+
+    # testing
+    graph = tf.Graph()
+    with tf.Session() as sess:
+        # Load the saved meta graph and restore variables
+        saver = tf.train.import_meta_graph("{}.meta".format("..\\process\\runs\\1548399694\\checkpoints\\model-2000"))
+        saver.restore(sess, "..\\process\\runs\\1548399694\\checkpoints\\model-2000")
+
+        # Get the placeholders from the graph by name
+        input_x = graph.get_operation_by_name("input_x").outputs[0]
+        # input_y = graph.get_operation_by_name("input_y").outputs[0]
+        dropout_keep_prob = graph.get_operation_by_name("dropout_keep_prob").outputs[0]
+
+        # Tensors we want to evaluate
+        predictions = graph.get_operation_by_name("output/predictions").outputs[0]
+
+        # Generate batches for one epoch
+        batches = batch_iter(list(x_test), batch_size, 1, shuffle=False)
+
+        # Collect the predictions here
+        all_predictions = []
+
+        for x_test_batch in batches:
+            batch_predictions = sess.run(predictions, {input_x: x_test_batch, dropout_keep_prob: 1.0})
+            all_predictions = np.concatenate([all_predictions, batch_predictions])
+
+    # Print accuracy if y_test is defined
+    if y_test is not None:
+        correct_predictions = float(sum(all_predictions == y_test))
+        print("Total number of test examples: {}".format(len(y_test)))
+        print("Accuracy: {:g}".format(correct_predictions / float(len(y_test))))
+
+
+
+
+
+
 if __name__ == '__main__':
-    train()
+    # train()
+    test()
