@@ -72,7 +72,7 @@ def test():
     """
     logger.info('Loading test data...')
     # Load test data
-    x_text, y = load_data_and_labels(TEST_DATA_PATH_NEG, TEST_DATA_PATH_POS)
+    x_text, y = load_data_and_labels(TEST_DATA_PATH_POS, TEST_DATA_PATH_NEG)
     # Load vocabulary
     vocab_processor = learn.preprocessing.VocabularyProcessor.restore('../process/runs/1548399694/vocab')
     x_test = np.array(list(vocab_processor.transform(x_text)))
@@ -101,9 +101,6 @@ def test():
             saver.restore(sess, "..\\process\\runs\\1548399694\\checkpoints\\model-2000")
 
             # Get the placeholders from the graph by name
-            # a = graph.get_operations()
-            # for i in a:
-            #     print(i)
             input_x = graph.get_operation_by_name("input_x").outputs[0]
             # input_y = graph.get_operation_by_name("input_y").outputs[0]
             dropout_keep_prob = graph.get_operation_by_name("dropout_keep_prob").outputs[0]
@@ -129,7 +126,7 @@ def test():
     # Save the test result to a csv
     predictions_human_readable = np.column_stack((np.array(x_text), all_predictions))
     output_path = "../data/test_data/prediction.csv"
-    print("Saving evaluation to {0}".format(output_path))
+    logger.info("Saving evaluation to {0}".format(output_path))
     with open(output_path, 'w') as f:
         csv.writer(f).writerows(predictions_human_readable)
 

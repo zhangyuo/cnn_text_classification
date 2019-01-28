@@ -205,7 +205,7 @@ class TextCNN(object):
                 self.train_step(sess, x_batch, y_batch)
                 current_step = tf.train.global_step(sess, self.global_step)
                 if current_step % self.evaluate_every == 0:
-                    logger.info("\nEvaluation:")
+                    logger.info("Evaluation:")
                     self.dev_step(sess, x_dev, y_dev)
                     logger.info("")
                 if current_step % self.checkpoint_every == 0:
@@ -221,6 +221,7 @@ class TextCNN(object):
             self.input_y: y_batch,
             self.dropout: self.dropout_keep_prob
         }
+        # scores, predictions = sess.run([self.scores, self.predictions], feed_dict)
         _, step, summaries, loss, accuracy = sess.run(
             [self.train_op, self.global_step, self.train_summary_op, self.loss, self.accuracy], feed_dict)
         time_str = datetime.datetime.now().isoformat()
@@ -262,7 +263,7 @@ class TextCNN(object):
         # Output directory for models and summaries
         timestamp = str(int(time.time()))
         out_dir = os.path.abspath(os.path.join(os.path.curdir, "runs", timestamp))
-        print("Writing to {}\n".format(out_dir))
+        logger.info("Writing to {}\n".format(out_dir))
 
         # Summaries for loss and accuracy
         loss_summary = tf.summary.scalar("loss", self.loss)
