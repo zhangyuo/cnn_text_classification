@@ -74,7 +74,7 @@ def test():
     # Load test data
     x_text, y = load_data_and_labels(TEST_DATA_PATH_POS, TEST_DATA_PATH_NEG)
     # Load vocabulary
-    vocab_processor = learn.preprocessing.VocabularyProcessor.restore('../process/runs/1548399694/vocab')
+    vocab_processor = learn.preprocessing.VocabularyProcessor.restore('../process/runs/1548669564/vocab')
     x_test = np.array(list(vocab_processor.transform(x_text)))
     y_test = y
     logger.info('test data: {}'.format(len(x_test)))
@@ -97,8 +97,8 @@ def test():
         with sess.as_default():
             # Load the saved meta graph and restore variables
             saver = tf.train.import_meta_graph(
-                "{}.meta".format("..\\process\\runs\\1548399694\\checkpoints\\model-2000"))
-            saver.restore(sess, "..\\process\\runs\\1548399694\\checkpoints\\model-2000")
+                "{}.meta".format("..\\process\\runs\\1548669564\\checkpoints\\model-4100"))
+            saver.restore(sess, "..\\process\\runs\\1548669564\\checkpoints\\model-4100")
 
             # Get the placeholders from the graph by name
             input_x = graph.get_operation_by_name("input_x").outputs[0]
@@ -132,5 +132,5 @@ def test():
 
 
 if __name__ == '__main__':
-    train()
-    # test()
+    # train()
+    test()

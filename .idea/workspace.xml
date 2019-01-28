@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="129b57ba-11b3-4cfb-a573-8f0f044e9b11" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/process/main_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/process/main_process.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tool/text_classify.py" beforeDir="false" afterPath="$PROJECT_DIR$/tool/text_classify.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +16,20 @@
       <file leaf-file-name="main_process.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/process/main_process.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="74" column="57" selection-start-line="74" selection-start-column="57" selection-end-line="74" selection-end-column="57" />
+            <state relative-caret-position="-410">
+              <caret line="100" column="87" selection-start-line="100" selection-start-column="87" selection-end-line="100" selection-end-column="87" />
               <folding>
                 <element signature="e#196#230#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
             </state>
           </provider>
         </entry>
@@ -101,6 +109,27 @@
               <item name="cnn_text_classification" type="b2602c69:ProjectViewProjectNode" />
               <item name="cnn_text_classification" type="462c0819:PsiDirectoryNode" />
               <item name="process" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cnn_text_classification" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cnn_text_classification" type="462c0819:PsiDirectoryNode" />
+              <item name="process" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cnn_text_classification" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cnn_text_classification" type="462c0819:PsiDirectoryNode" />
+              <item name="process" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+              <item name="1548669564" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cnn_text_classification" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cnn_text_classification" type="462c0819:PsiDirectoryNode" />
+              <item name="process" type="462c0819:PsiDirectoryNode" />
+              <item name="runs" type="462c0819:PsiDirectoryNode" />
+              <item name="1548669564" type="462c0819:PsiDirectoryNode" />
+              <item name="checkpoints" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cnn_text_classification" type="b2602c69:ProjectViewProjectNode" />
@@ -226,12 +255,12 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49867374" visible="true" weight="0.2217262" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32994923" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32994923" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32994923" />
       <window_info id="Structure" order="1" sideWeight="0.50132626" side_tool="true" weight="0.2217262" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.34179357" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.321489" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.321489" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -409,13 +438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-1065882744/numpy/core/multiarray.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
@@ -434,9 +456,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-165" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/process/runs/1548399694/checkpoints/checkpoint">
       <provider selected="true" editor-type-id="text-editor">
@@ -521,13 +540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/rt-polaritydata/rt-polarity.neg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5292" column="46" selection-start-line="5292" selection-end-line="5292" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/test_data/rt-polarity.pos">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
@@ -535,17 +547,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-161">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/rt-polaritydata/rt-polarity.neg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="5323" selection-start-line="5323" selection-end-line="5331" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/rt-polaritydata/rt-polarity.pos">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="3083" column="74" selection-start-line="3083" selection-end-line="3083" selection-end-column="74" />
+        <state relative-caret-position="212">
+          <caret line="5329" column="81" selection-start-line="5329" selection-start-column="81" selection-end-line="5329" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/process/main_process.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="74" column="57" selection-start-line="74" selection-start-column="57" selection-end-line="74" selection-end-column="57" />
+        <state relative-caret-position="-410">
+          <caret line="100" column="87" selection-start-line="100" selection-start-column="87" selection-end-line="100" selection-end-column="87" />
           <folding>
             <element signature="e#196#230#0" expanded="true" />
           </folding>
