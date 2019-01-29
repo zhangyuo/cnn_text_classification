@@ -84,10 +84,9 @@ class TextCNN(object):
 
     def embedding_layer_op(self):
         with tf.device('/cpu:0'), tf.name_scope("embedding"):
-            _word_embeddings = tf.Variable(
-                tf.random_uniform([self.vocab_size, self.embedding_dim], -1.0, 1.0),
-                trainable=False,
-                name="_word_embeddings")
+            _word_embeddings = tf.Variable(tf.random_uniform([self.vocab_size, self.embedding_dim], -1.0, 1.0),
+                                           trainable=False,
+                                           name="_word_embeddings")
             self.word_embeddings = tf.nn.embedding_lookup(params=_word_embeddings,
                                                           ids=self.input_x,
                                                           name='word_embeddings')
@@ -142,13 +141,16 @@ class TextCNN(object):
             b = tf.Variable(tf.constant(0.1, shape=[self.num_classes]), name="b")
             self.l2_loss += tf.nn.l2_loss(W)
             self.l2_loss += tf.nn.l2_loss(b)
-            self.scores = tf.nn.xw_plus_b(self.h_drop, W, b, name="scores")
-            self.predictions = tf.argmax(self.scores, 1, name="predictions")
+            self.logits = tf.nn.xw_plus_b(self.h_drop, W, b, name="logits")
+            self.predictions = tf.argmax(self.logits, 1, name="predictions")
+            # self.prob = tf.nn.softmax(self.logits, name="prob")
+            # self.predictions = tf.argmax(self.prob, 1, name="predictions")
 
     def loss_op(self):
         # Calculate mean cross-entropy loss
         with tf.name_scope("loss"):
-            losses = tf.nn.softmax_cross_entropy_with_logits(logits=self.scores, labels=self.input_y)
+            losses = tf.nn.softmax_cross_entropy_with_logits(labels=self.input_y, logits=self.logits)
+            # losses = tf.losses.softmax_cross_entropy(onehot_labels=self.input_y, logits=self.logits)
             self.loss = tf.reduce_mean(losses) + self.l2_reg_lambda * self.l2_loss
 
     def accuracy_op(self):

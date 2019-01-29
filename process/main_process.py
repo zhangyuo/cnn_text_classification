@@ -30,6 +30,7 @@ def train():
     max_document_length = max([len(x.split(" ")) for x in x_text])
     vocab_processor = learn.preprocessing.VocabularyProcessor(max_document_length)
     x = np.array(list(vocab_processor.fit_transform(x_text)))
+    vocab_size = len(vocab_processor.vocabulary_)
     # Randomly shuffle data
     np.random.seed(10)
     shuffle_indices = np.random.permutation(np.arange(len(y)))
@@ -47,7 +48,7 @@ def train():
     model = TextCNN(sequence_length=x_train.shape[1],
                     num_classes=y_train.shape[1],
                     dropout_keep=dropout,
-                    vocab_size=len(vocab_processor.vocabulary_),
+                    vocab_size=vocab_size,
                     embedding_dim=embedding_dim,
                     filter_sizes=filter_sizes,
                     num_filters=num_filters,
@@ -132,5 +133,5 @@ def test():
 
 
 if __name__ == '__main__':
-    # train()
-    test()
+    train()
+    # test()

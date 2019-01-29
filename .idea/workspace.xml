@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="129b57ba-11b3-4cfb-a573-8f0f044e9b11" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/process/main_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/process/main_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool/text_classify.py" beforeDir="false" afterPath="$PROJECT_DIR$/tool/text_classify.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main_process.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main_process.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/process/main_process.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-410">
-              <caret line="100" column="87" selection-start-line="100" selection-start-column="87" selection-end-line="100" selection-end-column="87" />
+            <state relative-caret-position="39">
+              <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
               <folding>
                 <element signature="e#196#230#0" expanded="true" />
               </folding>
@@ -25,11 +26,50 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="data_process.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/process/data_process.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="72">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="text_classify.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tool/text_classify.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="144" column="78" lean-forward="true" selection-start-line="144" selection-start-column="78" selection-end-line="144" selection-end-column="78" />
+              <folding>
+                <element signature="e#197#220#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="session.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Users/Administrator/Anaconda2/envs/py35_tf/Lib/site-packages/tensorflow/python/client/session.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="1151" selection-start-line="1151" selection-end-line="1151" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nn_ops.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Users/Administrator/Anaconda2/envs/py35_tf/Lib/site-packages/tensorflow/python/ops/nn_ops.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="1514" column="4" selection-start-line="1514" selection-start-column="4" selection-end-line="1514" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -47,6 +87,10 @@
       <find>Evaluation</find>
       <find>feels strangely hollow at its emotional core .</find>
       <find>a quiet family drama with a little bit of romance and a dose of darkness .</find>
+      <find>see it debate it remember it</find>
+      <find>see it</find>
+      <find>see it</find>
+      <find>len(vocab_processor.vocabulary_)</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -59,8 +103,8 @@
         <option value="$PROJECT_DIR$/data/test_data/rt-polarity.pos" />
         <option value="$PROJECT_DIR$/config/config.py" />
         <option value="$PROJECT_DIR$/process/eval.py" />
-        <option value="$PROJECT_DIR$/tool/text_classify.py" />
         <option value="$PROJECT_DIR$/process/main_process.py" />
+        <option value="$PROJECT_DIR$/tool/text_classify.py" />
       </list>
     </option>
   </component>
@@ -76,6 +120,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -119,32 +164,16 @@
             <path>
               <item name="cnn_text_classification" type="b2602c69:ProjectViewProjectNode" />
               <item name="cnn_text_classification" type="462c0819:PsiDirectoryNode" />
-              <item name="process" type="462c0819:PsiDirectoryNode" />
-              <item name="runs" type="462c0819:PsiDirectoryNode" />
-              <item name="1548669564" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cnn_text_classification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cnn_text_classification" type="462c0819:PsiDirectoryNode" />
-              <item name="process" type="462c0819:PsiDirectoryNode" />
-              <item name="runs" type="462c0819:PsiDirectoryNode" />
-              <item name="1548669564" type="462c0819:PsiDirectoryNode" />
-              <item name="checkpoints" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cnn_text_classification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cnn_text_classification" type="462c0819:PsiDirectoryNode" />
               <item name="tool" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../rnn/birnn_text_classification" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -252,16 +281,16 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49867374" visible="true" weight="0.2217262" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49867374" visible="true" weight="0.2157738" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32994923" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32994923" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32994923" />
       <window_info id="Structure" order="1" sideWeight="0.50132626" side_tool="true" weight="0.2217262" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.34179357" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.321489" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3401015" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.38747886" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -278,16 +307,26 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tool/text_classify.py</url>
-          <line>224</line>
-          <option name="timeStamp" value="17" />
+          <url>file://$PROJECT_DIR$/process/main_process.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="20" />
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="len(vocab_processor.vocabulary_)" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>len(vocab_processor.vocabulary_)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>float(sum(np.argmax(y_test,1) == all_predictions))</expression-string>
         <language-id>Python</language-id>
@@ -336,16 +375,24 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/process/eval.py">
+    <entry file="file://$PROJECT_DIR$/process/main_process.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+        <state relative-caret-position="2250">
+          <caret line="125" column="32" selection-start-line="125" selection-start-column="32" selection-end-line="125" selection-end-column="32" />
           <folding>
-            <element signature="e#24#47#0" expanded="true" />
+            <element signature="e#196#230#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process/eval.py" />
     <entry file="file://$PROJECT_DIR$/process/main_process.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1782">
@@ -373,16 +420,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/process/eval.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding>
-            <element signature="e#24#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/process/eval.py" />
     <entry file="file://$PROJECT_DIR$/process/data_process.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -457,13 +495,7 @@
         <state relative-caret-position="-165" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/process/runs/1548399694/checkpoints/checkpoint">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" selection-start-column="24" selection-end-column="124" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/process/runs/1548399694/checkpoints/checkpoint" />
     <entry file="file://D:/Users/Administrator/Anaconda2/envs/py35_tf/Lib/site-packages/tensorflow/python/training/saver.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
@@ -492,47 +524,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Users/Administrator/Anaconda2/envs/py35_tf/Lib/site-packages/tensorflow/python/client/session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="677" column="6" selection-start-line="677" selection-start-column="6" selection-end-line="677" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/process/eval.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="41" column="62" lean-forward="true" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
-          <folding>
-            <element signature="e#24#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/test_data/prediction.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="156" column="126" selection-start-line="156" selection-start-column="123" selection-end-line="156" selection-end-column="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tool/text_classify.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="224" column="54" lean-forward="true" selection-start-line="224" selection-start-column="54" selection-end-line="224" selection-end-column="54" />
-          <folding>
-            <element signature="e#197#220#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/process/data_process.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="33" column="61" lean-forward="true" selection-start-line="33" selection-start-column="61" selection-end-line="33" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/process/eval.py" />
     <entry file="file://$PROJECT_DIR$/data/test_data/rt-polarity.neg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
@@ -547,40 +539,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.py">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-161">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="1224">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test_data/prediction.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="170" selection-start-line="170" selection-end-line="170" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/rt-polaritydata/rt-polarity.neg">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="5323" selection-start-line="5323" selection-end-line="5331" />
+        <state relative-caret-position="178">
+          <caret line="2282" column="92" selection-start-line="2282" selection-start-column="85" selection-end-line="2282" selection-end-column="92" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/rt-polaritydata/rt-polarity.pos">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
+        <state relative-caret-position="421">
           <caret line="5329" column="81" selection-start-line="5329" selection-start-column="81" selection-end-line="5329" selection-end-column="81" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://D:/Users/Administrator/Anaconda2/envs/py35_tf/Lib/site-packages/tensorflow/python/client/session.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="106">
+          <caret line="1151" selection-start-line="1151" selection-end-line="1151" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Users/Administrator/Anaconda2/envs/py35_tf/Lib/site-packages/tensorflow/python/ops/nn_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="1514" column="4" selection-start-line="1514" selection-start-column="4" selection-end-line="1514" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process/data_process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/process/main_process.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-410">
-          <caret line="100" column="87" selection-start-line="100" selection-start-column="87" selection-end-line="100" selection-end-column="87" />
+        <state relative-caret-position="39">
+          <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
           <folding>
             <element signature="e#196#230#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tool/text_classify.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="144" column="78" lean-forward="true" selection-start-line="144" selection-start-column="78" selection-end-line="144" selection-end-column="78" />
+          <folding>
+            <element signature="e#197#220#0" expanded="true" />
           </folding>
         </state>
       </provider>
