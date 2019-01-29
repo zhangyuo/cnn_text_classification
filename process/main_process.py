@@ -47,7 +47,7 @@ def train():
 
     model = TextCNN(sequence_length=x_train.shape[1],
                     num_classes=y_train.shape[1],
-                    dropout_keep=dropout,
+                    dropout=dropout,
                     vocab_size=vocab_size,
                     embedding_dim=embedding_dim,
                     filter_sizes=filter_sizes,

@@ -25,7 +25,7 @@ class TextCNN(object):
     def __init__(self,
                  sequence_length,
                  num_classes,
-                 dropout_keep,
+                 dropout,
                  vocab_size,
                  embedding_dim,
                  filter_sizes,
@@ -41,7 +41,7 @@ class TextCNN(object):
                  checkpoint_every=100):
         self.sequence_length = sequence_length
         self.num_classes = num_classes
-        self.dropout_keep_prob = dropout_keep
+        self.dropout = dropout
         self.vocab_size = vocab_size
         self.embedding_dim = embedding_dim
         self.filter_sizes = filter_sizes
@@ -73,7 +73,7 @@ class TextCNN(object):
         """
         self.input_x = tf.placeholder(tf.int32, [None, self.sequence_length], name="input_x")
         self.input_y = tf.placeholder(tf.float32, [None, self.num_classes], name="input_y")
-        self.dropout = tf.placeholder(tf.float32, name="dropout_keep_prob")
+        self.dropout_keep_prob = tf.placeholder(tf.float32, name="dropout_keep_prob")
 
     def regular_loss_op(self):
         """
@@ -134,10 +134,9 @@ class TextCNN(object):
 
         # Final (unnormalized) scores and predictions
         with tf.name_scope("output"):
-            W = tf.get_variable(
-                "W",
-                shape=[num_filters_total, self.num_classes],
-                initializer=tf.contrib.layers.xavier_initializer())
+            W = tf.get_variable("W",
+                                shape=[num_filters_total, self.num_classes],
+                                initializer=tf.contrib.layers.xavier_initializer())
             b = tf.Variable(tf.constant(0.1, shape=[self.num_classes]), name="b")
             self.l2_loss += tf.nn.l2_loss(W)
             self.l2_loss += tf.nn.l2_loss(b)
@@ -221,7 +220,7 @@ class TextCNN(object):
         feed_dict = {
             self.input_x: x_batch,
             self.input_y: y_batch,
-            self.dropout: self.dropout_keep_prob
+            self.dropout_keep_prob: self.dropout
         }
         # scores, predictions = sess.run([self.scores, self.predictions], feed_dict)
         _, step, summaries, loss, accuracy = sess.run(
@@ -237,7 +236,7 @@ class TextCNN(object):
         feed_dict = {
             self.input_x: x_batch,
             self.input_y: y_batch,
-            self.dropout: 1.0
+            self.dropout_keep_prob: 1.0
         }
         step, summaries, loss, accuracy = sess.run([self.global_step, self.dev_summary_op, self.loss, self.accuracy],
                                                    feed_dict)
